@@ -23,26 +23,44 @@
       body {
         font-family: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
           "Helvetica Neue", sans-serif;
+
+        margin-top: 15rem;
+        color: #171717;
       }
 
-      .header {
-        margin-top: 18rem;
-        text-align: center;
+      a {
+        color: #171717;
+        text-decoration: none;
+        border-bottom: #171717 0.125em solid;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body.adaptive {
+          background-color: #171717;
+          color: #cccccc;
+        }
+
+        a {
+          color: #cccccc;
+          text-decoration: none;
+          border-bottom: #cccccc 0.125em solid;
+        }
       }
     </style>
   </head>
 
-  <body>
+  <body class="adaptive">
     <div class="container">
-      <section class="header">
-        <h2 class="title">Hi, I'm Talal.</h2>
-      </section>
-
       <div class="row">
-        <h4 style="text-align: center">
-          <a href="https://github.com/talal">GitHub</a> •
-          <a href="https://www.linkedin.com/in/m-talal-anwar/">LinkedIn</a>
-        </h4>
+        <div class="one-third column">
+          <div class="row">
+            <h3><a href="https://github.com/talal">GitHub</a></h3>
+            <h3>
+              <a href="https://www.linkedin.com/in/m-talal-anwar/">LinkedIn</a>
+            </h3>
+          </div>
+        </div>
+        <div class="two-thirds column"></div>
       </div>
     </div>
   </body>

@@ -7,11 +7,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://rsms.me/">
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 		<style>
+			:root {
+				font-family: Inter, sans-serif;
+				font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+			}
+			@supports (font-variation-settings: normal) {
+				:root { font-family: InterVariable, sans-serif; }
+			}
+
 			body {
-				font-family: "Inter", sans-serif;
-				font-optical-sizing: auto;
+				font-family: inherit;
 				font-weight: 300;
 				font-style: normal;
 				margin-top: 15rem;
@@ -25,7 +33,15 @@
 			a {
 				color: #171717;
 				text-decoration: none;
-				border-bottom: #171717 0.125em solid;
+				text-underline-offset: 5px;
+				border-bottom: #171717 4px solid;
+				transition: border-color 0.15s;
+			}
+
+			a:hover {
+				border-bottom: none;
+				text-decoration: underline wavy #171717;
+				text-underline-offset: 9px;
 			}
 
 			@media (prefers-color-scheme: dark) {
@@ -36,8 +52,11 @@
 
 				a {
 					color: #cccccc;
-					text-decoration: none;
-					border-bottom: #cccccc 0.125em solid;
+					border-bottom-color: #cccccc;
+				}
+
+				a:hover {
+					text-decoration-color: #cccccc;
 				}
 			}
 		</style>
@@ -53,8 +72,7 @@
 						</h3>
 						<h3><a href="https://github.com/talal">GitHub</a></h3>
 						<h3><a href="https://tangled.org/talal.ch">Tangled</a></h3>
-						<!-- <h3><a href="https://bsky.app/profile/talal.ch">Bluesky</a></h3> -->
-						<!-- <h3><a href="https://mastodon.social/@mtnwr">Mastodon</a></h3> -->
+						<h3><a href="https://bsky.app/profile/talal.ch">Bluesky</a></h3>
 					</div>
 				</div>
 				<div class="two-thirds column"></div>

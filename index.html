@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Muhammad Talal Anwar</title>
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍉</text></svg>">
 		<meta name="description" content="Muhammad Talal Anwar">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="preconnect" href="https://rsms.me/">
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+		<link rel="preload" as="font" type="font/woff2" href="InterDisplay-Regular.woff2" crossorigin>
 		<style>
-			:root {
-				font-family: Inter, sans-serif;
-				font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+			@font-face {
+				font-family: 'Inter Display';
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				src: url('InterDisplay-Regular.woff2') format('woff2');
 			}
-			@supports (font-variation-settings: normal) {
-				:root { font-family: InterVariable, sans-serif; }
+			:root {
+				font-family: 'Inter Display', sans-serif;
+				font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 			}
 
 			body {
-				font-family: inherit;
-				font-weight: 300;
-				font-style: normal;
 				margin: 0;
 				padding-top: 10rem;
 				padding-left: 4rem;
@@ -43,10 +43,10 @@
 			}
 
 			a {
-				color: #171717;
+				color: inherit;
 				text-decoration: none;
 				text-underline-offset: 5px;
-				border-bottom: #171717 4px solid;
+				border-bottom: currentColor 4px solid;
 				transition: border-color 0.15s;
 			}
 
@@ -58,14 +58,9 @@
 			}
 
 			@media (prefers-color-scheme: dark) {
-				body.adaptive {
+				body {
 					background-color: #171717;
 					color: #cccccc;
-				}
-
-				a {
-					color: #cccccc;
-					border-bottom-color: #cccccc;
 				}
 
 				a:hover {
@@ -76,7 +71,7 @@
 		</style>
 	</head>
 
-	<body class="adaptive">
+	<body>
 		<main class="links-container">
 			<h1><a href="https://www.linkedin.com/in/mtnwr">LinkedIn</a></h1>
 			<h1><a href="https://github.com/talal">GitHub</a></h1>
